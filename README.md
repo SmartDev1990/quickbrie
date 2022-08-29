@@ -4,20 +4,20 @@ An open source interface for QuickSwap -- a protocol for decentralized exchange 
 
 Enabling users to:
 
-- Add and remove their liquidity positions on QuickSwap protocol
-- Swap tokens on QuickSwap protocol
-- Participate in single and dual mining programmes running on QuickSwap protocol
-- Participate in Dragon's lair running on QuickSwap protocol
-- Participate in Dragon's syrup running on QuickSwap protocol
+-   Add and remove their liquidity positions on QuickSwap protocol
+-   Swap tokens on QuickSwap protocol
+-   Participate in single and dual mining programmes running on QuickSwap protocol
+-   Participate in Dragon's lair running on QuickSwap protocol
+-   Participate in Dragon's syrup running on QuickSwap protocol
 
 Useful links:
 
-- Website: [quickswap.exchange](https://quickswap.exchange/)
-- Beta: [beta.quickswap.exchange](https://beta.quickswap.exchange/)
-- Info: [info.quickswap.exchange](https://info.quickswap.exchange)
-- Twitter: [@QuickswapDEX](https://twitter.com/QuickswapDEX)
-- Reddit: [/r/QuickSwap](https://www.reddit.com/r/QuickSwap)
-- Discord: [QuickSwap](https://discord.gg/KTgdBTnU)
+-   Website: [quickswap.exchange](https://quickswap.exchange/)
+-   Beta: [beta.quickswap.exchange](https://beta.quickswap.exchange/)
+-   Info: [info.quickswap.exchange](https://info.quickswap.exchange)
+-   Twitter: [@QuickswapDEX](https://twitter.com/QuickswapDEX)
+-   Reddit: [/r/QuickSwap](https://www.reddit.com/r/QuickSwap)
+-   Discord: [QuickSwap](https://discord.gg/KTgdBTnU)
 
 ## Accessing the QuickSwap Interface
 

@@ -1,8 +1,4 @@
-import {
-  createTheme,
-  responsiveFontSizes,
-  ThemeOptions,
-} from '@material-ui/core';
+import { createTheme, responsiveFontSizes, ThemeOptions } from '@material-ui/core';
 import { merge } from 'lodash';
 
 // colors
@@ -37,93 +33,89 @@ const xs = 0;
 // spacing
 const spacing = 8;
 
-function createQuickTheme(
-  custom: any,
-  options?: ThemeOptions | undefined,
-  ...args: any[]
-) {
-  return createTheme(merge(custom, options), ...args);
+function createQuickTheme(custom: any, options?: ThemeOptions | undefined, ...args: any[]) {
+	return createTheme(merge(custom, options), ...args);
 }
 
 export const mainTheme = responsiveFontSizes(
-  createQuickTheme({
-    palette: {
-      action: {
-        disabledBackground: '',
-        disabled: 'set color of text here',
-      },
-      primary: {
-        main: primary,
-        dark: primaryDark,
-      },
-      secondary: {
-        main: secondary,
-        light: secondaryLight,
-      },
-      common: {
-        black,
-        white,
-      },
-      text: {
-        primary: textPrimary,
-        secondary: textSecondary,
-      },
-      background: {
-        default: bgColor,
-        paper: bgPalette,
-      },
-      success: {
-        main: successMain,
-        dark: successDark,
-      },
-      error: {
-        main: errorMain,
-        dark: errorDark,
-      },
-      divider: divider,
-    },
-    spacing,
-    breakpoints: {
-      values: {
-        xl,
-        lg,
-        md,
-        sm,
-        xs,
-      },
-    },
-    typography: {
-      fontFamily: "'Inter', sans-serif",
-      fontWeightRegular: 500,
-    },
-    overrides: {
-      MuiButton: {
-        root: {
-          textTransform: 'none',
-          backgroundColor: primary,
-          color: white,
-          boxShadow: 'none',
-          '&:hover': {
-            backgroundColor: primary,
-            opacity: 0.8,
-          },
-          '&$disabled': {
-            opacity: 0.3,
-          },
-        },
-        label: {
-          fontSize: 16,
-          lineHeight: '20px',
-        },
-      },
-      MuiContainer: {
-        root: {
-          paddingLeft: '40px !important',
-          paddingRight: '40px !important',
-        },
-      },
-    },
-  }),
+	createQuickTheme({
+		palette: {
+			action: {
+				disabledBackground: '',
+				disabled: 'set color of text here',
+			},
+			primary: {
+				main: primary,
+				dark: primaryDark,
+			},
+			secondary: {
+				main: secondary,
+				light: secondaryLight,
+			},
+			common: {
+				black,
+				white,
+			},
+			text: {
+				primary: textPrimary,
+				secondary: textSecondary,
+			},
+			background: {
+				default: bgColor,
+				paper: bgPalette,
+			},
+			success: {
+				main: successMain,
+				dark: successDark,
+			},
+			error: {
+				main: errorMain,
+				dark: errorDark,
+			},
+			divider: divider,
+		},
+		spacing,
+		breakpoints: {
+			values: {
+				xl,
+				lg,
+				md,
+				sm,
+				xs,
+			},
+		},
+		typography: {
+			fontFamily: "'Inter', sans-serif",
+			fontWeightRegular: 500,
+		},
+		overrides: {
+			MuiButton: {
+				root: {
+					textTransform: 'none',
+					backgroundColor: primary,
+					color: white,
+					boxShadow: 'none',
+					'&:hover': {
+						backgroundColor: primary,
+						opacity: 0.8,
+					},
+					'&$disabled': {
+						opacity: 0.3,
+					},
+				},
+				label: {
+					fontSize: 16,
+					lineHeight: '20px',
+				},
+			},
+			MuiContainer: {
+				root: {
+					paddingLeft: '40px !important',
+					paddingRight: '40px !important',
+				},
+			},
+		},
+	}),
 );
 
 const theme = { mainTheme };

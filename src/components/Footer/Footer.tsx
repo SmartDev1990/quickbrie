@@ -4,14 +4,14 @@ import { ReactComponent as QuickIcon } from 'assets/images/quickIcon.svg';
 import 'components/styles/Footer.scss';
 
 const Footer: React.FC = () => {
-  const copyrightYear = new Date().getFullYear();
+	const copyrightYear = new Date().getFullYear();
 
-  return (
-    <Box className='footer'>
-      <QuickIcon />
-      <p>© {copyrightYear} QuickSwap.</p>
-    </Box>
-  );
+	return (
+		<Box className='footer'>
+			<QuickIcon />
+			<p>© {copyrightYear} QuickSwap.</p>
+		</Box>
+	);
 };
 
 export default Footer;

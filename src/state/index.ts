@@ -1,9 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { save, load } from 'redux-localstorage-simple';
-import {
-  gelatoReducers,
-  GELATO_PERSISTED_KEYS,
-} from '@gelatonetwork/limit-orders-react';
+import { gelatoReducers, GELATO_PERSISTED_KEYS } from '@gelatonetwork/limit-orders-react';
 
 import application from 'state/application/reducer';
 import { updateVersion } from './global/actions';
@@ -19,35 +16,35 @@ import burn from './burn/reducer';
 import multicall from './multicall/reducer';
 
 const PERSISTED_KEYS: string[] = [
-  'user',
-  'transactions',
-  'lists',
-  'farms',
-  'dualFarms',
-  'syrups',
-  ...GELATO_PERSISTED_KEYS,
+	'user',
+	'transactions',
+	'lists',
+	'farms',
+	'dualFarms',
+	'syrups',
+	...GELATO_PERSISTED_KEYS,
 ];
 
 const store = configureStore({
-  reducer: {
-    application,
-    user,
-    transactions,
-    swap,
-    mint,
-    burn,
-    multicall,
-    lists,
-    farms,
-    dualFarms,
-    syrups,
-    ...gelatoReducers,
-  },
-  middleware: (getDefaultMiddleware) => [
-    ...getDefaultMiddleware({ serializableCheck: false, thunk: false }),
-    save({ states: PERSISTED_KEYS }),
-  ],
-  preloadedState: load({ states: PERSISTED_KEYS }),
+	reducer: {
+		application,
+		user,
+		transactions,
+		swap,
+		mint,
+		burn,
+		multicall,
+		lists,
+		farms,
+		dualFarms,
+		syrups,
+		...gelatoReducers,
+	},
+	middleware: (getDefaultMiddleware) => [
+		...getDefaultMiddleware({ serializableCheck: false, thunk: false }),
+		save({ states: PERSISTED_KEYS }),
+	],
+	preloadedState: load({ states: PERSISTED_KEYS }),
 });
 
 store.dispatch(updateVersion());

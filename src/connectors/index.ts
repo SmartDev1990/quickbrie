@@ -16,60 +16,55 @@ const NETWORK_URL = 'https://serverrpc.com';
 const FORMATIC_KEY = process.env.REACT_APP_FORTMATIC_KEY;
 const PORTIS_ID = process.env.REACT_APP_PORTIS_ID;
 
-export const NETWORK_CHAIN_ID: number = parseInt(
-  process.env.REACT_APP_CHAIN_ID ?? '1',
-);
+export const NETWORK_CHAIN_ID: number = parseInt(process.env.REACT_APP_CHAIN_ID ?? '1');
 
 if (typeof NETWORK_URL === 'undefined') {
-  throw new Error(
-    `REACT_APP_NETWORK_URL must be a defined environment variable`,
-  );
+	throw new Error(`REACT_APP_NETWORK_URL must be a defined environment variable`);
 }
 
 export const network = new NetworkConnector({
-  urls: { [Number('32520')]: NETWORK_URL },
+	urls: { [Number('32520')]: NETWORK_URL },
 });
 
 let networkLibrary: Web3Provider | undefined;
 export function getNetworkLibrary(): Web3Provider {
-  return (networkLibrary =
-    networkLibrary ?? new Web3Provider(network.provider as any));
+	return (networkLibrary = networkLibrary ?? new Web3Provider(network.provider as any));
 }
 
 export const injected = new InjectedConnector({
-  supportedChainIds: [32520, 80001],
+	supportedChainIds: [32520, 80001],
 });
 
 export const safeApp = new SafeAppConnector();
 
 // mainnet only
 export const walletconnect = new WalletConnectConnector({
-  rpc: { 32520: NETWORK_URL },
-  bridge: 'https://bridge.walletconnect.org',
-  qrcode: true,
+	rpc: { 32520: NETWORK_URL },
+	bridge: 'https://bridge.walletconnect.org',
+	qrcode: true,
 });
 
 // mainnet only
 export const portis = new PortisConnector({
-  dAppId: PORTIS_ID ?? '',
-  networks: [32520],
-  config: {
-    nodeUrl: NETWORK_URL,
-    chainId: 32520,
-  },
+	dAppId: PORTIS_ID ?? '',
+	networks: [32520],
+	config: {
+		nodeUrl: NETWORK_URL,
+		chainId: 32520,
+	},
 });
 
 // mainnet only
 export const walletlink = new WalletLinkConnector({
-  url: NETWORK_URL,
-  appName: 'Uniswap',
-  appLogoUrl:
-    'https://mpng.pngfly.com/20181202/bex/kisspng-emoji-domain-unicorn-pin-badges-sticker-unicorn-tumblr-emoji-unicorn-iphoneemoji-5c046729264a77.5671679315437924251569.jpg',
-  supportedChainIds: [32520],
+	url: NETWORK_URL,
+	appName: 'Uniswap',
+	appLogoUrl:
+		'https://mpng.pngfly.com/20181202/bex/kisspng-emoji-domain-unicorn-pin-badges-sticker-unicorn-tumblr-emoji-unicorn-iphoneemoji-5c046729264a77.5671679315437924251569.jpg',
+	supportedChainIds: [32520],
 });
 
 export const ledger = new LedgerConnector({
-  chainId: 32520,
-  url: NETWORK_URL,
-  pollingInterval: POLLING_INTERVAL,
+	chainId: 32520,
+	url: NETWORK_URL,
+	pollingInterval: POLLING_INTERVAL,
 });

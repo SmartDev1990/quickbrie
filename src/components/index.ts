@@ -41,14 +41,11 @@ export { default as MoonpayModal } from './MoonpayModal';
 export { default as BuyFiatModal } from './BuyFiatModal';
 export { default as AccountDetails } from './AccountDetails';
 export { default as Web3ReactManager } from './Web3ReactManager';
+export { default as ConfirmSwapModal, FormattedPriceImpact } from './ConfirmSwapModal';
 export {
-  default as ConfirmSwapModal,
-  FormattedPriceImpact,
-} from './ConfirmSwapModal';
-export {
-  default as TransactionConfirmationModal,
-  ConfirmationModalContent,
-  TransactionErrorContent,
+	default as TransactionConfirmationModal,
+	ConfirmationModalContent,
+	TransactionErrorContent,
 } from './TransactionConfirmationModal';
 export { default as SearchInput } from './SearchInput';
 export { default as SwapTokenDetails } from './SwapTokenDetails';
